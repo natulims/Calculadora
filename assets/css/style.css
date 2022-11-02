@@ -1,0 +1,243 @@
+/*font*/
+@import url("https://fonts.googleapis.com/css2?family=Chilanka&family=Montserrat:wght@300&family=Nunito:wght@300&family=Share+Tech+Mono&display=swap");
+
+/*color palette*/
+:root {
+  --background--color: #eec170;
+  --calculator-color: #f7dcc1;
+  --numbers-color: #f58549;
+  --operators-color: #ffe9b3;
+  --clear-color: #f27059;
+  --display-color: #f56b49;
+  --clear2-color: #f79d65;
+
+  /*text color*/
+  --c-color: #ffe9b3;
+  --result-color: rgb(14, 10, 7);
+  --oper-color: #e62314;
+
+  /*hover*/
+  --numhover-color: #f9b16e;
+  --clearhover-color: #f9a971;
+  --disphover-color: #f89977;
+  --opetshover-color: #f7907a;
+}
+
+/*global config*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: var(--background--color);
+}
+/*end - global config*/
+
+/*section*/
+section {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*end - section*/
+
+/*container*/
+.container {
+  width: 90%;
+  max-width: 350px;
+  background-color: var(--calculator-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 1px 10px 2px rgba(255, 90, 60, 0.6);
+}
+
+/*display*/
+.display {
+  background-image: linear-gradient(to top right, #f7b267, #f4845f, #f27059);
+  height: 100px;
+  width: 100%;
+  text-align: right;
+  padding: 20px;
+  font-size: 30px;
+  position: relative;
+}
+
+.display_1 {
+  opacity: 0.4;
+  font-size: 20px;
+  height: 20px;
+  overflow: hidden;
+  color: var(--result-color);
+}
+
+.display_2 {
+  overflow: hidden;
+  color: var(--result-color);
+}
+/*end - display*/
+
+/*result*/
+.result {
+  position: absolute;
+  bottom: 0;
+  left: 10;
+  font-size: 20px;
+  opacity: 0.3;
+  font-family: "Share Tech Mono", monospace;
+  color: var(--result-color);
+}
+/*end - result*/
+
+/*buttons config*/
+/*buttons*/
+.all_button {
+  display: grid;
+  grid-template: repeat(4, 1fr) / repeat(4, 1fr);
+}
+
+.button {
+  border: 0.5px solid rgba(240, 88, 17, 0.205);
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--numbers-color);
+  font-family: "Chilanka", cursive;
+}
+
+.button:hover {
+  background-color: #f1b8833a;
+  color: var(--numhover-color);
+}
+
+/*operations*/
+.operation {
+  border: 0.5px solid rgba(240, 88, 17, 0.205);
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--oper-color);
+}
+
+.operation:hover {
+  background-color: #f09d66a4;
+  color: var(--opetshover-color);
+}
+/*end - operations*/
+
+/*operations*/
+.equal {
+  border: 0.5px solid rgba(240, 88, 17, 0.205);
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--oper-color);
+}
+
+.equal:hover {
+  background-color: #f09d66a4;
+  color: var(--opetshover-color);
+}
+/*end - operations*/
+
+/*button 0
+.btn-0 {
+  grid-column: 1/3;
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--numbers-color);
+  font-family: "Chilanka", cursive;
+}
+
+.btn-0:hover {
+  background-color: #f1b8833a;
+  color: var(--numhover-color);
+}
+*/
+
+/*numbers*/
+.number {
+  border: 0.5px solid rgba(240, 88, 17, 0.205);
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  color: var(--numbers-color);
+  font-family: "Chilanka", cursive;
+}
+
+.number:hover {
+  background-color: #f1b8833a;
+  color: var(--numhover-color);
+}
+
+/*clear*/
+.clear {
+  border: 0.5px solid rgba(240, 88, 17, 0.205);
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: var(--clear-color);
+  color: var(--c-color);
+}
+
+.clear:hover {
+  background-color: #fdbe77;
+  color: var(--c-color);
+}
+
+/*clear 2 */
+.clear_2 {
+  border: 0.5px solid rgba(240, 88, 17, 0.205);
+  display: inline-block;
+  height: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: var(--clear2-color);
+  color: var(--c-color);
+}
+
+.clear_2:hover {
+  background-color: #fdbe77;
+  color: var(--c-color);
+}
+/*end - clear2*/
